@@ -1,13 +1,13 @@
 # DWES
 Practicas de "Desarrollo Web en Entorno Servidor" de 2º CFGS en Desarrollo de Aplicaciones Web Bilingüe (DAW).
 
-## Unit 1
+# Unit 1
 
-### Worksheet#1
+# Worksheet#1
 
 - 1- Some exercises to practice Arrays in PHP.
 
-#### Worksheet#1.3
+### Worksheet#1.3
 
 - 1- Make a PHP page where you enter two words in two variables and say if they rhyme or not. If the last three letters match, you have to say that they rhyme. If they coincide only the last two have to say that they rhyme a bit and if not, they do not rhyme. Remember that words will rhyme regardless of whether they are written in uppercase or lowercase.
 
