@@ -32,7 +32,6 @@
         for ($i=0; $i < count($arrCadena) -1; $i++) { 
             if($arrCadena[$i] == $palabra){
                  echo "The word $palabra appears in the position $i";
-                 return null;
             }
         }
    }
@@ -59,7 +58,6 @@
    function cadenaPrimeraPalabra($frase,$palabra){
        $cadena = stristr($frase,$palabra);
        echo $cadena;
-       return null;
    }
 
    cadenaPrimeraPalabra($frase,"cadena");
@@ -69,7 +67,6 @@
    function cadena12($cadena){
        $result = substr($cadena,12,strlen($cadena));
        echo $result;
-       return null;
    }
 
    cadena12($frase);
@@ -79,7 +76,6 @@
    function cadena18y6($cadena){
        $result = substr($cadena,18,6);
        echo $result;
-       return null;
    }
 
    cadena18y6($frase);
@@ -89,7 +85,6 @@
    function cadenaUltimos6($cadena){
        $result = substr($cadena,-6);
        echo $result;
-       return null;
    }
 
    cadenaUltimos6($frase);
@@ -99,7 +94,6 @@
    function cadenaUltimos6Final($cadena){
        $result = substr($cadena,-26,6);
        echo $result;
-       return null;
    }
 
    cadenaUltimos6Final($frase);
@@ -109,14 +103,47 @@
    function cadenaUltimoFinal($cadena){
        $result = substr($cadena,4,-7);
        echo $result;
-       return null;
    }
 
    cadenaUltimoFinal($frase);
 
    echo "<h1>Exercise 2</h2>";
 
-   $frase = "Bienvenidos a la aventura de aprender PHP en 30";
+   $frase = "Bienvenidos a la aventura de aprender PHP en 30 dias";
 
+   echo "<h3>Center of the sentence</h3>";
+
+   function centroCadena($cadena){
+       $arrCadena = explode(" ",$cadena);
+       $pos = sizeof($arrCadena)/2;
+       echo $arrCadena[$pos];
+   }
    
+   centroCadena($frase);
+
+   echo "<h3>Position of the 'PHP'</h3>";
+
+   function buscaPalabras($cadena,$palabra){
+       $arrCadena = explode(" ",$cadena);
+       if(in_array($palabra,$arrCadena)){
+            echo $palabra." exist in the sentece";
+       }else{
+            echo "Dont exist";
+       }
+   }
+
+   buscaPalabras($frase,"PHP");
+
+   echo "<h3>Replace value in the array</h3>";
+
+   function remplazarValorArry($cadena,$remplazado,$remplazar){
+       $arrCadena = explode(" ",$cadena);
+       echo str_replace("aventura","<b>mision</b>",$cadena);
+   }
+
+   remplazarValorArry($frase,"aventura","<b>mision</b>");
+
+   echo "<h1>Exercise 3</h2>";
+   $html = '<a href="/arbol/prueba.php" class="prueba" onmouseOver="status=">prueba de enlaces</a>';
+   highlight_string($html);
 ?>
