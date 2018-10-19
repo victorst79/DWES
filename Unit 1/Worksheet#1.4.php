@@ -144,6 +144,6 @@
    remplazarValorArry($frase,"aventura","<b>mision</b>");
 
    echo "<h1>Exercise 3</h2>";
-   $html = '<a href="/arbol/prueba.php" class="prueba" onmouseOver="status=">prueba de enlaces</a>';
+   $html = '<a href="/arbol/prueba.php" class="prueba" onmouseOver="status=\'hola\'; return trae;">prueba de enlaces</a>';
    highlight_string($html);
 ?>
