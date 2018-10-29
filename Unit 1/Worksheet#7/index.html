@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP y Formularios</title>
+</head>
+<body>
+    <h1>Elemetos de entrada</h1>
+    <form action="./ejercicio1-resultado.php" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Elementos de tipo INPUT</legend>
+            <label>TEXT</label>
+            <br>
+            Introduzca la cadena a buscar: <input type="text" name="cadena">
+            <hr>
+            <label>RADIO</label>
+            <br>
+            Sexo:
+            <input type="radio" name="sexo" value="Mujer">Mujer 
+            <input type="radio" name="sexo" value="Hombre">Hombre
+            <hr>
+            <label>CHECKBOX</label>
+            <br>
+            Extras:
+            <input type="checkbox" name="extra[]" value="Gareje">Gareje
+            <input type="checkbox" name="extra[]" value="Piscina">Piscina
+            <input type="checkbox" name="extra[]" value="Jardin">Jardin
+            <hr>
+            <label>FILE</label>
+            <br>
+            Fichero:
+            <input type="file" name="archivo">
+            <hr>
+            <label>PASSWORD</label>
+            <br>
+            Contraseña:
+            <input type="password" name="contrasena">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Elemetos de tipo SELECT</legend>
+            <label>SELECT SIMPLE</label>
+            <br>
+            Color:
+            <select name="color" id="color">
+                <option value="rojo">Rojo</option>
+                <option value="azul">Azul</option>
+                <option value="verde">Verde</option>
+            </select>
+            <hr>
+            <label>SELECT MULTIPLE</label>
+            <br>
+            Idiomas:
+            <br>
+            <select multiple name="idioma">
+                <option value="ingles">Ingles</option>
+                <option value="frances">Frances</option>
+                <option value="aleman">Aleman</option>
+                <option value="japones">Japones</option>
+            </select>
+            <hr>
+            <label>Elemento TEXTAREA</label>
+            <br>
+            Comentario:
+            <br>
+            <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Este libro me parece..."></textarea>
+        </fieldset>
+        <input type="submit"> <input type="reset">
+    </form>
+</body>
+</html>
