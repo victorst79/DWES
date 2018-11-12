@@ -65,11 +65,13 @@
         // EXERCISE 3
         function readDirectory($directory){
             $dir = $directory;
+            $count = 1;
             if (is_dir($dir)){
                 if ($dh = opendir($dir)){
                     echo("<h3>Ficheros del directorio</h3>");
                     while (($file = readdir($dh)) !== false){
-                        echo "filename:". $file ."<br>";
+                        echo "Nobre de Archivo $count :". $file ."<br>";
+                        $count++;
                     }
                 closedir($dh);
                 }
