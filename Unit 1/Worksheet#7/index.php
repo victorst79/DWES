@@ -45,10 +45,13 @@
         function readFiles($url_file){
             $file = $url_file;
             $handle = fopen($file,"r");
+            $count = 0;
             while (!feof($handle)){
                 $line = fgets($handle);
                 echo($line."<br>");
+                $count++;
             }
+            echo("El fichero tiene: $count lineas<br>");
             echo("El fichero pesa: ".filesize($file)." Bytes<br>");
             fclose($handle);
         }
