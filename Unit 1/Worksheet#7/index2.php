@@ -7,6 +7,7 @@
 <body>
     <?php
         // EXERCISE 5
+        echo("<h3>Ejercicio 5 - Array bidimensional asociativo</h3>");
         $peliculas = array();
         $peliculas["Ciencia Ficcion"] = array('Pelicula 1' => 'Alien', 'Pelicula 2' => 'Terminator 2', 'Pelicula 3' => 'La guerra de las galaxias');
         $peliculas["Accion"] = array('Pelicula 1' => 'El caballero oscuro', 'Pelicula 2' => 'El precio del poder', 'Pelicula 3' => 'Rocky');
@@ -77,13 +78,17 @@
             }
         }
     ?>
-    <h3>Ejercicio 8</h3>
-    <form action="#" method="post">
+    <h3>Ejercicio 9</h3>
+    <form action="#" method="<?php echo($_SERVER['PHP_SELF']); ?>">
         <label>Numero a adivinar</label>
         <br>
         <input type="number">
         <br>
         <input type="submit" value="Enviar">
     </form>
+    <?php
+        $count9 = 0;
+        echo("Intento: ".$count9);
+    ?>
 </body>
 </html>
