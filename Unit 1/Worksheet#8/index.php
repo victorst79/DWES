@@ -26,11 +26,12 @@
     <?php
          $users = array();   
 
-        function creacionUsuario($usuario,$pass,$email){
-            $users[$usuario] = [
+        function creacionUsuario($users,$usuario,$pass,$email){
+            $usuario = [
                 "Contraseña" => $pass,
                 "Email" => $email
             ];
+            array_push($users, $usuario);
         }
 
         if(isset($_POST["envio"])){
@@ -38,7 +39,8 @@
             $pass = $_POST["password"];
             $email = $_POST["email"];
 
-            creacionUsuario($usuario,$pass,$email);
+            creacionUsuario($users,$usuario,$pass,$email);
+            print_r($users);
         }
     ?>
 </body>
