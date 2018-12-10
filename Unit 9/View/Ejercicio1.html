@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Empleados. Gestion </title>
+	</head>
+	<body>
+		<h1>Datos del empleado</h1>
+		<form action="index.php" method="post">
+			<table>
+				<tr>
+					<th align="center" colspan="2">Empleados</th>
+				</tr>
+				<tr>
+					<td>NIF</td><td><input type="text" name= "nif"></td>
+				</tr>
+				<tr>
+					<td>Nombre</td><td><input type="text" name= "nombre"></td>
+				</tr>
+				<tr>
+					<td>Telefono</td><td><input type="text" name= "tlfn"></td>
+				</tr>
+				<tr>
+					<td>E-mail</td><td><input type="text" name= "email"></td>
+				</tr>
+				<tr>
+					<td>Departamento</td><td><input type="text" name= "dpto"></td>
+				</tr>
+				<tr>
+					<td>Categoria</td><td><input type="text" name= "catg"></td>
+				</tr>
+				<tr>
+					<td>Salario</td><td><input type="text" name= "salar"></td>
+				</tr>
+			</table>
+			<button value="Insertar" name="inserta">Insertar</button>
+			<button value="Modificar" name= "modifica">Modificar</button>
+			<button value="Eliminar" name= "elimina">Eliminar</button>
+			<button value="Listar todos" name="listarAll">Listar todo</button>
+			<button value="Listar minimo" name="listarMin">Listar salarios min</button>
+		</form>
+	</body>
+</html>
