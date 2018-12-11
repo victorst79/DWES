@@ -1,20 +1,17 @@
 <?php
 
-    function insertar($nombre,$comentario){
-        $type = "mysql";
-        $host = "localhost";
-        $nombre_de_base = "comentarios";
-        $usuario = "root";
-        $contrasena = "";       
+    require('./model/model.php');
+    require('./controller/conexiones.php');
 
-        try{
-            $conexion = new PDO('mysql:host='.$host.';dbname='.$nombre_de_base, $usuario, $contrasena);
-            $sql = "INSERT INTO comentarios VALUES ('$nombre','$comentario')";
-            $conexion->exec($sql);
-        }catch(PDOException $e){
-            echo $sql . "<br>" . $e->getMessage();
-        }
+    session_start();
+    if (!isset($_SESSION['nombre'])) {
+        $_SESSION['nombre'] = $_POST['usuario'];
+    } else {
+        echo "Tu nombre de usuario es: ".$_SESSION['nombre'];
+        echo "Tu id de sesion es: ".session_id();
     }
+    
+    
 
     insertar($_POST['usuario'],$_POST['comentario']);
     echo "Comentario enviado <br>";

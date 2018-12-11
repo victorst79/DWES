@@ -2,7 +2,7 @@
     class Conexion extends PDO{
         private $type = "mysql";
         private $host = "localhost";
-        private $nombre_de_base = "instituto";
+        private $nombre_de_base = "comentarios";
         private $usuario = "root";
         private $contrasena = "";
 
@@ -15,4 +15,6 @@
             }
         }
     }
+
+    
 ?>

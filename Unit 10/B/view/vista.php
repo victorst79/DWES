@@ -1,23 +1,14 @@
 <?php
-    function vista(){
-        $type = "mysql";
-        $host = "localhost";
-        $nombre_de_base = "comentarios";
-        $usuario = "root";
-        $contrasena = "";
+    require('./../model/model.php');
+    require('./../controller/conexiones.php');
 
-        try{
-            $conexion = new PDO('mysql:host='.$host.';dbname='.$nombre_de_base, $usuario, $contrasena);
-            $sql = "SELECT *FROM comentarios";
-            $res = $conexion->query($sql);
-
-            foreach($res as $value) {
-                echo "Nombre: $value[0] <br> Comentario: $value[1]<br><br>";
-            }
-        }catch(PDOException $e){
-            echo $sql . "<br>" . $e->getMessage();
-        }
+    session_start();
+    if (!isset($_SESSION['nombre'])) {
+    } else {
+        echo "Tu nombre de usuario es: ".$_SESSION['nombre']."<br>";
+        echo "Tu id de sesion es: ".session_id()."<br>";
     }
 
     vista();
+    session_destroy();
 ?>
